@@ -19,16 +19,16 @@ const app = initializeApp({
 
 const auth = getAuth(app);
 const firestore = getFirestore(app);
-getAnalytics(app); 
+getAnalytics(app);
 
 export const Context = createContext(null);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Context.Provider value={{
-      auth,
-      firestore
-    }}>
-      <App />
-    </Context.Provider>
+  <Context.Provider value={{
+    auth,
+    firestore
+  }}>
+    <App />
+  </Context.Provider>
 );
